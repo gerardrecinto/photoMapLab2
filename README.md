@@ -1,61 +1,35 @@
-## Starter Project for Photo Map Exercise (Swift)
-![Image](http://i.imgur.com/WIwqNtn.gif)
+# Photo Map
 
-- Connects with Foursquare API
-- Implements `LocationsViewController`
-- Placeholders for `PhotoMapViewController` and `FullImageViewController`
-# Lab 6 - *Name of App Here*
+An iOS app built with Swift that lets users photograph a location, search for it using the Foursquare API, and drop a pin with an image annotation on a MapKit map.
 
-**Name of your app** is an app that allows the user to search for locations using the [Foursquare API](https://developer.foursquare.com/docs) and create a pin with an image annotation.
+## Features
 
-Time spent: **X** hours spent in total
+- Camera integration for taking photos in-app
+- Location search powered by the Foursquare API
+- Drop a pin on a MapKit map with a custom image annotation
+- Full-screen image view on annotation tap
+- Core Location for user position
 
-## User Stories
+## Tech Stack
 
-The following **required** user stories are complete:
+| Layer | Technology |
+|---|---|
+| Language | Swift |
+| UI | UIKit, MapKit, Auto Layout |
+| Location | Foursquare API, Core Location |
+| Dependencies | CocoaPods |
 
-- [x ] Configure initial map view (+2pt)
-- [x ] User can take a photo (+1pt)
-- [x ] User can tag a location (+1pt)
-- [x ] User can drop a pin with image annotation (+2pt)
+## Setup
 
-The following **additional** user stories are implemented:
+```bash
+git clone https://github.com/gerardrecinto/photoMapLab2.git
+cd photoMapLab2
+pod install
+open "Photo Map.xcworkspace"
+```
 
-- [ ] Implement a Custom MKAnnotation (+1pt)
-- [ ] User can see Fullscreen Picture (+1pt)
-- [ ] Replace the Pin with an Image (+1pt)
-- [ ] List anything else that you can get done to improve the app functionality! (+1-3pts)
+Add your Foursquare client ID and secret before building.
 
-Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
+## Demo
 
-1.
-2.
-
-## Video Walkthrough
-
-Here's a walkthrough of implemented user stories:
-
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
-
-## Notes
-
-Describe any challenges encountered while building the app.
-
-## License
-
-    Copyright [yyyy] [name of copyright owner]
-
-        Licensed under the Apache License, Version 2.0 (the "License");
-	    you may not use this file except in compliance with the License.
-	        You may obtain a copy of the License at
-
-		        http://www.apache.org/licenses/LICENSE-2.0
-
-			    Unless required by applicable law or agreed to in writing, software
-			        distributed under the License is distributed on an "AS IS" BASIS,
-				    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-				        See the License for the specific language governing permissions and
-					    limitations under the License.
-    
+![Demo](http://i.imgur.com/WIwqNtn.gif)
