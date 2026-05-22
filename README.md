@@ -1,19 +1,21 @@
-# Photo Map
+# Photo Map with Foursquare
 
 ![Swift](https://img.shields.io/badge/Swift-3%2B-F05138?logo=swift&logoColor=white)
 ![iOS 9+](https://img.shields.io/badge/iOS-9%2B-000000?logo=apple&logoColor=white)
 ![MapKit](https://img.shields.io/badge/MapKit-Foursquare-blue)
 ![Core Location](https://img.shields.io/badge/CoreLocation-GPS-green)
 
-An iOS app built with Swift that lets users photograph a location, search for it using the Foursquare API, and drop a pin with an image annotation on a MapKit map.
+![Demo](docs/assets/demo2.gif)
+
+Photograph a location, search it via the Foursquare API, and drop a custom image pin on a MapKit map. Tap the annotation callout to view the photo full-screen.
 
 ## Features
 
 - Camera integration for taking photos in-app
 - Location search powered by the Foursquare API
-- Drop a pin on a MapKit map with a custom image annotation
+- Custom image annotation pinned on MapKit map
 - Full-screen image view on annotation tap
-- Core Location for user position
+- Core Location for current user position
 
 ## Tech Stack
 
@@ -27,14 +29,10 @@ An iOS app built with Swift that lets users photograph a location, search for it
 ## Setup
 
 ```bash
-git clone https://github.com/gerardrecinto/photoMapLab2.git
-cd photoMapLab2
+git clone https://github.com/gerardrecinto/photo-map-foursquare-ios.git
+cd photo-map-foursquare-ios
 pod install
 open "Photo Map.xcworkspace"
 ```
 
 Add your Foursquare client ID and secret before building.
-
-## Demo
-
-![Demo](http://i.imgur.com/WIwqNtn.gif)
