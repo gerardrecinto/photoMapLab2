@@ -1,5 +1,10 @@
 # Photo Map
 
+![Swift](https://img.shields.io/badge/Swift-3%2B-F05138?logo=swift&logoColor=white)
+![iOS 9+](https://img.shields.io/badge/iOS-9%2B-000000?logo=apple&logoColor=white)
+![MapKit](https://img.shields.io/badge/MapKit-Foursquare-blue)
+![Core Location](https://img.shields.io/badge/CoreLocation-GPS-green)
+
 An iOS app built with Swift that lets users photograph a location, search for it using the Foursquare API, and drop a pin with an image annotation on a MapKit map.
 
 ## Features
