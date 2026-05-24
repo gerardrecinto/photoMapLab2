@@ -11,8 +11,10 @@ import MapKit
 class PhotoMapViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
   //one degree of latitude is approximately 111 kilometers (69 miles) at all times.
   //@IBOutlet weak var mapView: MKMapView!
-  let sfRegion = MKCoordinateRegionMake(CLLocationCoordinate2DMake(37.783333, -122.416667),
-            MKCoordinateSpanMake(0.1, 0.1))
+  let sfRegion = MKCoordinateRegion(
+    center: CLLocationCoordinate2D(latitude: 37.783333, longitude: -122.416667),
+    span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+  )
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,9 +24,9 @@ class PhotoMapViewController: UIViewController, UIImagePickerControllerDelegate,
       let vc = UIImagePickerController()
       vc.delegate = self
       vc.allowsEditing = true
-      vc.sourceType = UIImagePickerControllerSourceType.camera
+      vc.sourceType = .camera
       self.present(vc, animated: true, completion: nil)
-      if UIImagePickerController.isSourceTypeAvailable(.camera){
+      if UIImagePickerController.isSourceTypeAvailable(.camera) {
         print("Camera is available")
         vc.sourceType = .camera
       } else {
@@ -33,10 +35,12 @@ class PhotoMapViewController: UIViewController, UIImagePickerControllerDelegate,
       }
     }
 
-  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-    let originalImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
-    let editedImage = info[UIImagePickerController.InfoKey.editedImage] as! UIImage
+  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+    let editedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage
     // do something with images
+    _ = originalImage
+    _ = editedImage
     dismiss(animated: true, completion: nil)
   }
 
