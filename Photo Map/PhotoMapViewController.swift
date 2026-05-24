@@ -13,10 +13,10 @@ class PhotoMapViewController: UIViewController, UIImagePickerControllerDelegate,
   //@IBOutlet weak var mapView: MKMapView!
   let sfRegion = MKCoordinateRegionMake(CLLocationCoordinate2DMake(37.783333, -122.416667),
             MKCoordinateSpanMake(0.1, 0.1))
-  
+
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+
       //mapView.setRegion(sfRegion, animated: false)
         // Do any additional setup after loading the view.
       let vc = UIImagePickerController()
@@ -32,21 +32,17 @@ class PhotoMapViewController: UIViewController, UIImagePickerControllerDelegate,
         vc.sourceType = .photoLibrary
       }
     }
-  
+
   func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-    let originalImage = info[UIImagePickerControllerOriginalImage] as! UIImage
-    let editedImage = info[UIImagePickerControllerEditedImage] as! UIImage
+    let originalImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+    let editedImage = info[UIImagePickerController.InfoKey.editedImage] as! UIImage
     // do something with images
     dismiss(animated: true, completion: nil)
   }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 
-    
+
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -54,6 +50,6 @@ class PhotoMapViewController: UIViewController, UIImagePickerControllerDelegate,
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    
+
 
 }
